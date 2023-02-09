@@ -1,0 +1,15 @@
+name: Test
+
+on: 
+  push
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.11
+    steps:
+      - name: test
+        run: |
+          pip install poetry
+          ls
